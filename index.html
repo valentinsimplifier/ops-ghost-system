@@ -66,9 +66,15 @@
     }
     .hero-image img {
   max-width: 100%;
-  max-height: 520px;
+  max-height: 620px;
   object-fit: contain;
-    }
+  display: block;
+}
+@media (max-width: 768px) {
+  .hero-image {
+    display: none;
+  }
+}
     section {
       padding: 4rem 2rem;
     }
@@ -153,7 +159,7 @@
       <a href="https://calendly.com/valentin-simplifier/30min" target="_blank">Réserve ton appel</a>
     </div>
     <div class="hero-image">
-      <img src="freelance-checklist.png" alt="Illustration GhostOps" />
+      <img src="hero-ghostops-banner.png" alt="Illustration GhostOps" />
     </div>
   </header>
 
