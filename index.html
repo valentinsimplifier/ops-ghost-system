@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta name="description" content="Système clé-en-main pour ghostwriters : briefs, relances, suivi, reporting, facturation. Moins d’opérations, plus de publications." />
+  <meta name="description" content="Système clé-en-main pour ghostwriters : briefs, relances, suivi, reporting, facturation. Moins d'opérations, plus de publications." />
   <meta name="keywords" content="ghostwriter, automatisation, briefs client, facturation freelance, reporting LinkedIn, simplifier agency" />
   <meta name="author" content="Simplifier.agency" />
   <link rel="canonical" href="https://simplifier.agency" />
@@ -25,7 +25,7 @@
       }
     }
   </script>
-
+
   <meta property="og:title" content="simplifier.agency" />
   <meta property="og:description" content="Un système clair et opérationnel pour ghostwriters : briefs, relances, suivi, reporting, facturation. En place en 3 jours." />
   <meta property="og:image" content="https://simplifier.agency/preview.jpg" />
@@ -35,7 +35,12 @@
   <title>simplifier.agency</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Solution 1: Utiliser la dernière version de Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Solution 2: Utiliser Font Awesome Kit (alternative) -->
+  <!-- <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script> -->
+  
   <style>
     :root {
       --primary: #2563eb;
@@ -59,14 +64,14 @@
       background: var(--dark);
       color: white;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      padding: 2.5rem 2rem;
-      gap: 2rem;
+      justify-content: center;
+      padding: 4rem 2rem;
+      text-align: center;
     }
     .hero-text {
-      flex: 1 1 400px;
+      max-width: 700px;
     }
     .hero-text h1 {
       font-size: 3rem;
@@ -135,6 +140,7 @@
       font-size: 2rem;
       color: var(--primary);
       margin-bottom: 1rem;
+      display: inline-block; /* Assure que l'icône est bien visible */
     }
     .card h3 {
       font-size: 1.1rem;
@@ -162,12 +168,9 @@
 
   <header class="hero">
     <div class="hero-text">
-      <h1>Moins d’opérations. Plus de publications.</h1>
+      <h1>Moins d'opérations. Plus de publications.</h1>
       <p>Un système opérationnel pour gérer les briefs, relances, statuts, reporting et factures. En place en 3 jours.</p>
       <a href="https://calendly.com/valentin-simplifier/30min" target="_blank">Réserve ton appel</a>
-    </div>
-    <div class="hero-image">
-      <img src="hero-ghostops-banner.png" alt="Illustration système pour ghostwriter" />
     </div>
   </header>
 
@@ -175,10 +178,26 @@
     <div class="container">
       <h2>Les problèmes récurrents des ghostwriters</h2>
       <div class="card-grid">
-        <div class="card"><i class="fas fa-question-circle"></i><h3>Briefs flous</h3><p>Tu passes du temps à courir après les infos.</p></div>
-        <div class="card"><i class="fas fa-exchange-alt"></i><h3>Outils éparpillés</h3><p>Notion, Drive, Gmail : tu perds le fil.</p></div>
-        <div class="card"><i class="fas fa-chart-line"></i><h3>Stats manuelles</h3><p>Tu fais ton reporting LinkedIn à la main.</p></div>
-        <div class="card"><i class="fas fa-file-invoice"></i><h3>Facturation artisanale</h3><p>Tu comptes les posts à la main, puis tu génères une facture manuellement.</p></div>
+        <div class="card">
+          <i class="fa-solid fa-circle-question"></i>
+          <h3>Briefs flous</h3>
+          <p>Tu passes du temps à courir après les infos.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-diagram-project"></i>
+          <h3>Outils éparpillés</h3>
+          <p>Notion, Drive, Gmail : tu perds le fil.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Stats manuelles</h3>
+          <p>Tu fais ton reporting LinkedIn à la main.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-file-invoice"></i>
+          <h3>Facturation artisanale</h3>
+          <p>Tu comptes les posts à la main, puis tu génères une facture manuellement.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -187,11 +206,31 @@
     <div class="container">
       <h2>Ce que je mets en place pour toi</h2>
       <div class="card-grid">
-        <div class="card"><i class="fas fa-user-check"></i><h3>Formulaire de brief</h3><p>Ton client le remplit, toi tu reçois une tâche claire.</p></div>
-        <div class="card"><i class="fas fa-stream"></i><h3>Suivi par statut</h3><p>Tu vois où en est chaque post sans te demander.</p></div>
-        <div class="card"><i class="fas fa-bolt"></i><h3>Rappels automatiques</h3><p>Le client est relancé sans que tu lèves le petit doigt.</p></div>
-        <div class="card"><i class="fas fa-chart-bar"></i><h3>Reporting simplifié</h3><p>Tu entres les chiffres, le rapport part tout seul.</p></div>
-        <div class="card"><i class="fas fa-file-invoice-dollar"></i><h3>Facturation au propre</h3><p>Tu choisis : au post ou au forfait. La facture est générée.</p></div>
+        <div class="card">
+          <i class="fa-solid fa-pen-to-square"></i>
+          <h3>Formulaire de brief</h3>
+          <p>Ton client le remplit, toi tu reçois une tâche claire.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-bars-progress"></i>
+          <h3>Suivi par statut</h3>
+          <p>Tu vois où en est chaque post sans te demander.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-bell"></i>
+          <h3>Rappels automatiques</h3>
+          <p>Le client est relancé sans que tu lèves le petit doigt.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-chart-column"></i>
+          <h3>Reporting simplifié</h3>
+          <p>Tu entres les chiffres, le rapport part tout seul.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-file-invoice-dollar"></i>
+          <h3>Facturation au propre</h3>
+          <p>Tu choisis : au post ou au forfait. La facture est générée.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -200,9 +239,21 @@
     <div class="container">
       <h2>Concrètement, ce que ça change</h2>
       <div class="card-grid">
-        <div class="card"><i class="fas fa-clock"></i><h3>Tu récupères 1 jour/semaine</h3><p>Moins de tâches répétitives, plus de focus.</p></div>
-        <div class="card"><i class="fas fa-check-circle"></i><h3>Tu sais où t’en es</h3><p>Tu bosses sans relire 10 messages.</p></div>
-        <div class="card"><i class="fas fa-user-shield"></i><h3>Tu passes pour un pro</h3><p>Le client voit que tout est cadré.</p></div>
+        <div class="card">
+          <i class="fa-solid fa-clock"></i>
+          <h3>Tu récupères 1 jour/semaine</h3>
+          <p>Moins de tâches répétitives, plus de focus.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-circle-check"></i>
+          <h3>Tu sais où t'en es</h3>
+          <p>Tu bosses sans relire 10 messages.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-user-tie"></i>
+          <h3>Tu passes pour un pro</h3>
+          <p>Le client voit que tout est cadré.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -211,8 +262,16 @@
     <div class="container">
       <h2>Tarif</h2>
       <div class="card-grid">
-        <div class="card"><i class="fas fa-wrench"></i><h3>1 500 € HT</h3><p>Installation du système complet en 3 jours.</p></div>
-        <div class="card"><i class="fas fa-cogs"></i><h3>+150 €/mois (optionnel)</h3><p>Maintenance et ajustements continus.</p></div>
+        <div class="card">
+          <i class="fa-solid fa-wrench"></i>
+          <h3>1 500 € HT</h3>
+          <p>Installation du système complet en 3 jours.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-gears"></i>
+          <h3>+150 €/mois (optionnel)</h3>
+          <p>Maintenance et ajustements continus.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -221,9 +280,44 @@
     <div class="container">
       <h2>Pour qui ?</h2>
       <div class="card-grid">
-        <div class="card"><i class="fas fa-user"></i><h3>Tu gères 3+ clients</h3><p>Tu sens que tu passes plus de temps à organiser qu’à écrire.</p></div>
-        <div class="card"><i class="fas fa-bolt"></i><h3>Tu veux poser un cadre</h3><p>Marre de tout refaire à la main à chaque nouveau client.</p></div>
-        <div class="card"><i class="fas fa-handshake"></i><h3>Tu veux livrer sans stress</h3><p>Tu veux que ton suivi soit aussi pro que tes posts.</p></div>
+        <div class="card">
+          <i class="fa-solid fa-users"></i>
+          <h3>Tu gères 3+ clients</h3>
+          <p>Tu sens que tu passes plus de temps à organiser qu'à écrire.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-border-all"></i>
+          <h3>Tu veux poser un cadre</h3>
+          <p>Marre de tout refaire à la main à chaque nouveau client.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-handshake"></i>
+          <h3>Tu veux livrer sans stress</h3>
+          <p>Tu veux que ton suivi soit aussi pro que tes posts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #ecfdf5;">
+    <div class="container">
+      <h2>Pourquoi nous faire confiance ?</h2>
+      <div class="card-grid">
+        <div class="card">
+          <i class="fa-solid fa-layer-group"></i>
+          <h3>On sait faire</h3>
+          <p>Des systèmes similaires tournent déjà chez d'autres équipes.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-plug"></i>
+          <h3>Pas d'usine à gaz</h3>
+          <p>Un système clair avec Airtable et Make. Pas besoin d'apprendre de nouveaux outils.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <h3>100% utile</h3>
+          <p>Chaque élément du système t'économise du temps.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -231,5 +325,23 @@
   <footer>
     © 2025 Simplifier.agency. Tous droits réservés.
   </footer>
+
+  <div style="position: sticky; bottom: 0; width: 100%; background: #f9fafb; padding: 1rem; text-align: center; border-top: 1px solid #e5e7eb; z-index: 1000;">
+    <a href="https://calendly.com/valentin-simplifier/30min" target="_blank" style="background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; border: none; font-size: 1rem;">Réserve ton appel</a>
+  </div>
+
+  <!-- Script de vérification pour les icônes -->
+  <script>
+    // Vérifier si Font Awesome est chargé correctement
+    document.addEventListener('DOMContentLoaded', function() {
+      // Vérifier si les icônes sont visibles
+      const icons = document.querySelectorAll('.card i');
+      if (icons.length > 0) {
+        console.log('Les icônes Font Awesome sont chargées correctement');
+      } else {
+        console.error('Problème de chargement des icônes Font Awesome');
+      }
+    });
+  </script>
 </body>
 </html>
