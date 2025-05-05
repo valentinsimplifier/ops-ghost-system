@@ -439,7 +439,7 @@
     © 2025 Simplifier.agency. Tous droits réservés.
   </footer>
 
-  <div style="position: sticky; bottom: 0; width: 100%; background: #f9fafb; padding: 1rem; text-align: center; border-top: 1px solid #e5e7eb; z-index: 1000; box-sizing: border-box;">
+  <div id="sticky-cta" style="position: fixed; bottom: 0; left: 0; width: 100%; background: #f9fafb; padding: 1rem; text-align: center; border-top: 1px solid #e5e7eb; z-index: 1000; box-sizing: border-box;">
     <a href="https://calendly.com/valentin-simplifier/30min" target="_blank" style="background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; border: none; font-size: 1rem;">✓ Démarrer ta transformation</a>
   </div>
 
@@ -450,6 +450,7 @@
       const navMenu = document.getElementById('nav-menu');
       const overlay = document.getElementById('overlay');
       const navLinks = document.querySelectorAll('.nav-menu a');
+      const stickyCta = document.getElementById('sticky-cta');
       
       // Fonction pour ouvrir/fermer le menu
       function toggleMenu() {
@@ -490,6 +491,11 @@
             }
           }
         });
+      });
+      
+      // S'assurer que le CTA reste visible pendant le défilement
+      window.addEventListener('scroll', function() {
+        stickyCta.style.display = 'block';
       });
       
       // Vérifier si les icônes sont visibles
