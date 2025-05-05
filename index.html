@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta name="description" content="Système clé-en-main pour ghostwriters : briefs, relances, suivi, reporting, facturation. Moins d’opérations, plus de publications." />
+  <meta name="keywords" content="ghostwriter, automatisation, briefs client, facturation freelance, reporting LinkedIn, simplifier agency" />
+  <meta name="author" content="Simplifier.agency" />
+  <link rel="canonical" href="https://simplifier.agency" />
+  <meta name="robots" content="index, follow" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Système pour ghostwriters",
+      "description": "Automatisez briefs, reporting, relances et factures. Un système conçu pour ghostwriters débordés.",
+      "brand": {
+        "@type": "Organization",
+        "name": "Simplifier.agency"
+      },
+      "url": "https://simplifier.agency",
+      "image": "https://simplifier.agency/preview.jpg",
+      "offers": {
+        "@type": "Offer",
+        "price": "1500.00",
+        "priceCurrency": "EUR"
+      }
+    }
+  </script>
+
+  <meta property="og:title" content="simplifier.agency" />
+  <meta property="og:description" content="Un système clair et opérationnel pour ghostwriters : briefs, relances, suivi, reporting, facturation. En place en 3 jours." />
+  <meta property="og:image" content="https://simplifier.agency/preview.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ops Ghost System</title>
+  <title>simplifier.agency</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     :root {
       --primary: #2563eb;
@@ -47,57 +77,74 @@
       margin-bottom: 2rem;
     }
     .hero-text a {
-  display: inline-block;
-  background: white;
-  color: var(--primary);
-  padding: 0.9rem 1.5rem;
-  font-weight: 600;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-  border: 2px solid white;
-}
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 0.9rem 1.5rem;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      border: 2px solid white;
+    }
     .hero-text a:hover {
-  background: #f9fafb;
-}
+      background: #f9fafb;
+    }
     .hero-image {
       flex: 1 1 400px;
       text-align: center;
     }
     .hero-image img {
-  max-width: 100%;
-  max-height: 620px;
-  object-fit: contain;
-  display: block;
-}
-@media (max-width: 768px) {
-  .hero-image {
-    display: none;
-  }
-}
+      max-width: 100%;
+      max-height: 420px;
+      object-fit: contain;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .hero-image {
+        display: none;
+      }
+    }
     section {
       padding: 4rem 2rem;
-    }
-    section:nth-child(even) {
-      background: var(--light);
     }
     h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
       color: #111827;
     }
-    blockquote {
-      margin: 2rem 0;
-      padding: 1.5rem;
-      background: #f9fafb;
-      border-left: 4px solid var(--primary);
-      font-style: italic;
-    }
-    .price-box {
-      background: var(--accent);
-      padding: 2rem;
-      border-radius: 12px;
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
       margin-top: 2rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      border: 1px solid #e5e7eb;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #4b5563;
+      margin: 0;
     }
     footer {
       text-align: center;
@@ -106,129 +153,77 @@
       font-size: 0.9rem;
       color: #6b7280;
     }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .card {
-      background: linear-gradient(145deg, #f1f5f9, #ffffff);
-      padding: 1.5rem;
-      border-radius: 10px;
-      border-left: 5px solid var(--primary);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
-      font-weight: 600;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    }
-    .card {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  .card::before {
-    content: '🛠️';
-    font-size: 1.5rem;
-    flex-shrink: 0;
-  }
-  section:nth-of-type(3) .card::before { content: '❌'; }
-  section:nth-of-type(4) .card::before { content: '✅'; }
-  section:nth-of-type(5) .card::before { content: '⚙️'; }
-  section:nth-of-type(6) .card::before { content: '💥'; }
-  section:nth-of-type(8) .card::before { content: '👤'; }
-
-  section:nth-of-type(3) { background: #fee2e2; }
-  section:nth-of-type(4) { background: #d1fae5; }
-  section:nth-of-type(5) { background: #e0f2fe; }
-  section:nth-of-type(6) { background: #fef08a; }
-  section:nth-of-type(8) { background: #e5e7eb; }
-</style>
+  </style>
 </head>
 <body>
   <div style="padding: 1rem 2rem; font-weight: 600; font-size: 1rem; background-color: #f9fafb; border-bottom: 1px solid #e5e7eb;">
     simplifier.agency
   </div>
+
   <header class="hero">
     <div class="hero-text">
       <h1>Moins d’opérations. Plus de publications.</h1>
-      <p>Un système clé en main pour ghostwriters LinkedIn débordés : briefs, relances, pipeline, reporting — automatisés en 3 jours.</p>
+      <p>Un système opérationnel pour gérer les briefs, relances, statuts, reporting et factures. En place en 3 jours.</p>
       <a href="https://calendly.com/valentin-simplifier/30min" target="_blank">Réserve ton appel</a>
     </div>
     <div class="hero-image">
-      <img src="freelance-checklist.png" alt="Illustration GhostOps" />
+      <img src="hero-ghostops-banner.png" alt="Illustration système pour ghostwriter" />
     </div>
   </header>
 
-  <section>
+  <section style="background: #fee2e2;">
     <div class="container">
-      <h2>🔮 Imagine…</h2>
-      <p>Ton brief part tout seul. Tes relances aussi. Ton reporting s’envoie chaque semaine. Et toi, tu bosses — mieux, sans distraction.</p>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>❌ Le problème</h2>
+      <h2>Les problèmes récurrents des ghostwriters</h2>
       <div class="card-grid">
-        <div class="card">Envoyer des briefs à la main</div>
-        <div class="card">Courir après les validations</div>
-        <div class="card">Mettre à jour ton tableau Notion</div>
-        <div class="card">Faire des reportings LinkedIn à la main</div>
+        <div class="card"><i class="fas fa-question-circle"></i><h3>Briefs flous</h3><p>Tu passes du temps à courir après les infos.</p></div>
+        <div class="card"><i class="fas fa-exchange-alt"></i><h3>Outils éparpillés</h3><p>Notion, Drive, Gmail : tu perds le fil.</p></div>
+        <div class="card"><i class="fas fa-chart-line"></i><h3>Stats manuelles</h3><p>Tu fais ton reporting LinkedIn à la main.</p></div>
+        <div class="card"><i class="fas fa-file-invoice"></i><h3>Facturation artisanale</h3><p>Tu comptes les posts à la main, puis tu génères une facture manuellement.</p></div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section style="background: #ecfdf5;">
     <div class="container">
-      <h2>✅ La solution</h2>
-      <blockquote>Je construis ce système en partant d’un vrai vécu terrain : j’ai automatisé des business entiers pour des freelances et petites équipes. Mon but : te faire respirer et te rendre scalable.</blockquote>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2>⚙️ Ce que tu obtiens</h2>
+      <h2>Ce que je mets en place pour toi</h2>
       <div class="card-grid">
-        <div class="card">Formulaire de brief client → doc structuré</div>
-        <div class="card">Pipeline Airtable (statuts, deadlines, vues)</div>
-        <div class="card">Relances client automatiques</div>
-        <div class="card">Reporting hebdo automatique</div>
-        <div class="card">Onboarding fluide (mail + accès + échéancier)</div>
-        <div class="card">Tutoriel Loom personnalisé</div>
+        <div class="card"><i class="fas fa-user-check"></i><h3>Formulaire de brief</h3><p>Ton client le remplit, toi tu reçois une tâche claire.</p></div>
+        <div class="card"><i class="fas fa-stream"></i><h3>Suivi par statut</h3><p>Tu vois où en est chaque post sans te demander.</p></div>
+        <div class="card"><i class="fas fa-bolt"></i><h3>Rappels automatiques</h3><p>Le client est relancé sans que tu lèves le petit doigt.</p></div>
+        <div class="card"><i class="fas fa-chart-bar"></i><h3>Reporting simplifié</h3><p>Tu entres les chiffres, le rapport part tout seul.</p></div>
+        <div class="card"><i class="fas fa-file-invoice-dollar"></i><h3>Facturation au propre</h3><p>Tu choisis : au post ou au forfait. La facture est générée.</p></div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section style="background: #fef08a;">
     <div class="container">
-      <h2>💥 Résultat</h2>
+      <h2>Concrètement, ce que ça change</h2>
       <div class="card-grid">
-        <div class="card">+1 jour/semaine gagné</div>
-        <div class="card">Zéro charge mentale</div>
-        <div class="card">Une image pro auprès de tes clients</div>
+        <div class="card"><i class="fas fa-clock"></i><h3>Tu récupères 1 jour/semaine</h3><p>Moins de tâches répétitives, plus de focus.</p></div>
+        <div class="card"><i class="fas fa-check-circle"></i><h3>Tu sais où t’en es</h3><p>Tu bosses sans relire 10 messages.</p></div>
+        <div class="card"><i class="fas fa-user-shield"></i><h3>Tu passes pour un pro</h3><p>Le client voit que tout est cadré.</p></div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="container price-box">
-      <h2>💰 Tarif</h2>
-      <p><strong>1 500 € HT</strong> – Livraison en 3 jours, support 30 jours inclus</p>
-      <p><strong>+150 €/mois</strong> → maintenance + évolutions</p>
+  <section style="background: #fff7d6;">
+    <div class="container">
+      <h2>Tarif</h2>
+      <div class="card-grid">
+        <div class="card"><i class="fas fa-wrench"></i><h3>1 500 € HT</h3><p>Installation du système complet en 3 jours.</p></div>
+        <div class="card"><i class="fas fa-cogs"></i><h3>+150 €/mois (optionnel)</h3><p>Maintenance et ajustements continus.</p></div>
+      </div>
     </div>
   </section>
 
-  <section>
+  <section style="background: #f3f4f6;">
     <div class="container">
-      <h2>👋 Pour qui ?</h2>
+      <h2>Pour qui ?</h2>
       <div class="card-grid">
-        <div class="card">Ghostwriters / micro-agences LinkedIn</div>
-        <div class="card">3 clients minimum</div>
-        <div class="card">Prêt·e à déléguer l’opérationnel</div>
+        <div class="card"><i class="fas fa-user"></i><h3>Tu gères 3+ clients</h3><p>Tu sens que tu passes plus de temps à organiser qu’à écrire.</p></div>
+        <div class="card"><i class="fas fa-bolt"></i><h3>Tu veux poser un cadre</h3><p>Marre de tout refaire à la main à chaque nouveau client.</p></div>
+        <div class="card"><i class="fas fa-handshake"></i><h3>Tu veux livrer sans stress</h3><p>Tu veux que ton suivi soit aussi pro que tes posts.</p></div>
       </div>
     </div>
   </section>
