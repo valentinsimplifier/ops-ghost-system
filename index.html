@@ -31,7 +31,7 @@
   <meta property="og:image" content="https://simplifier.agency/preview.jpg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>simplifier.agency</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -47,6 +47,11 @@
       --dark: #1e3a8a;
       --light: #f3f4f6;
       --accent: #fef08a;
+    }
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
     }
     body {
       font-family: 'Inter', sans-serif;
@@ -162,7 +167,7 @@
   </style>
 </head>
 <body>
-  <div style="padding: 1rem 2rem; font-weight: 600; font-size: 1rem; background-color: #f9fafb; border-bottom: 1px solid #e5e7eb;">
+  <div style="padding: 1rem 2rem; font-weight: 600; font-size: 1rem; background-color: #f9fafb; border-bottom: 1px solid #e5e7eb; width: 100%; box-sizing: border-box;">
     simplifier.agency
   </div>
 
@@ -326,7 +331,7 @@
     © 2025 Simplifier.agency. Tous droits réservés.
   </footer>
 
-  <div style="position: sticky; bottom: 0; width: 100%; background: #f9fafb; padding: 1rem; text-align: center; border-top: 1px solid #e5e7eb; z-index: 1000;">
+  <div style="position: sticky; bottom: 0; width: 100%; background: #f9fafb; padding: 1rem; text-align: center; border-top: 1px solid #e5e7eb; z-index: 1000; box-sizing: border-box;">
     <a href="https://calendly.com/valentin-simplifier/30min" target="_blank" style="background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; border: none; font-size: 1rem;">Réserve ton appel</a>
   </div>
 
