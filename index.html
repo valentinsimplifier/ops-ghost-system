@@ -35,11 +35,7 @@
   <title>simplifier.agency</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <!-- Solution 1: Utiliser la dernière version de Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <!-- Solution 2: Utiliser Font Awesome Kit (alternative) -->
-  <!-- <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script> -->
   
   <style>
     :root {
@@ -110,11 +106,6 @@
       object-fit: contain;
       display: block;
     }
-    @media (max-width: 768px) {
-      .hero-image {
-        display: none;
-      }
-    }
     section {
       padding: 4rem 2rem;
     }
@@ -164,22 +155,137 @@
       font-size: 0.9rem;
       color: #6b7280;
     }
+    
+    /* Styles pour le menu hamburger */
+    .navbar {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1rem;
+      background-color: #f9fafb;
+      border-bottom: 1px solid #e5e7eb;
+      width: 100%;
+      box-sizing: border-box;
+      position: sticky;
+      top: 0;
+      z-index: 1001;
+    }
+    
+    .logo {
+      font-weight: 600;
+    }
+    
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary);
+      z-index: 1002;
+    }
+    
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100vh;
+      background-color: white;
+      box-shadow: -4px 0 15px rgba(0,0,0,0.1);
+      padding-top: 70px;
+      transition: 0.3s ease;
+      z-index: 1001;
+    }
+    
+    .nav-menu.active {
+      right: 0;
+    }
+    
+    .nav-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-menu li {
+      margin: 0.8rem 0;
+      padding: 0 2rem;
+    }
+    
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--primary);
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 0;
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+    
+    .nav-menu a i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+    }
+    
+    .nav-menu a:hover {
+      color: var(--dark);
+      transform: translateX(5px);
+      transition: transform 0.2s ease;
+    }
+    
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      display: none;
+      z-index: 1000;
+    }
+    
+    .overlay.active {
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <div style="padding: 1rem 2rem; font-weight: 600; font-size: 1rem; background-color: #f9fafb; border-bottom: 1px solid #e5e7eb; width: 100%; box-sizing: border-box;">
-    simplifier.agency
+  <div class="navbar">
+    <div class="logo">simplifier.agency</div>
+    <button class="hamburger" id="hamburger-btn" aria-label="Menu de navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
   </div>
+  
+  <div class="overlay" id="overlay"></div>
+  
+  <nav class="nav-menu" id="nav-menu">
+    <ul>
+      <li><a href="#problemes"><i class="fa-solid fa-triangle-exclamation"></i> Le problème</a></li>
+      <li><a href="#solutions"><i class="fa-solid fa-lightbulb"></i> Notre solution</a></li>
+      <li><a href="#benefices"><i class="fa-solid fa-rocket"></i> Vos gains</a></li>
+      <li><a href="#tarif"><i class="fa-solid fa-tag"></i> Prix</a></li>
+      <li><a href="#pour-qui"><i class="fa-solid fa-user-check"></i> Pour vous ?</a></li>
+      <li><a href="#confiance"><i class="fa-solid fa-users-gear"></i> Notre expertise</a></li>
+    </ul>
+  </nav>
 
   <header class="hero">
     <div class="hero-text">
       <h1>Moins d'opérations. Plus de publications.</h1>
       <p>Un système opérationnel pour gérer les briefs, relances, statuts, reporting et factures. En place en 3 jours.</p>
-      <a href="https://calendly.com/valentin-simplifier/30min" target="_blank">Réserve ton appel</a>
+      <a href="https://calendly.com/valentin-simplifier/30min" target="_blank">✓ Libère ton temps</a>
     </div>
   </header>
 
-  <section style="background: #fee2e2;">
+  <section id="problemes" style="background: #fee2e2;">
     <div class="container">
       <h2>Les problèmes récurrents des ghostwriters</h2>
       <div class="card-grid">
@@ -207,7 +313,7 @@
     </div>
   </section>
 
-  <section style="background: #ecfdf5;">
+  <section id="solutions" style="background: #ecfdf5;">
     <div class="container">
       <h2>Ce que je mets en place pour toi</h2>
       <div class="card-grid">
@@ -240,7 +346,7 @@
     </div>
   </section>
 
-  <section style="background: #fef08a;">
+  <section id="benefices" style="background: #fef08a;">
     <div class="container">
       <h2>Concrètement, ce que ça change</h2>
       <div class="card-grid">
@@ -263,7 +369,7 @@
     </div>
   </section>
 
-  <section style="background: #fff7d6;">
+  <section id="tarif" style="background: #fff7d6;">
     <div class="container">
       <h2>Tarif</h2>
       <div class="card-grid">
@@ -281,7 +387,7 @@
     </div>
   </section>
 
-  <section style="background: #f3f4f6;">
+  <section id="pour-qui" style="background: #f3f4f6;">
     <div class="container">
       <h2>Pour qui ?</h2>
       <div class="card-grid">
@@ -304,7 +410,7 @@
     </div>
   </section>
 
-  <section style="background: #ecfdf5;">
+  <section id="confiance" style="background: #ecfdf5;">
     <div class="container">
       <h2>Pourquoi nous faire confiance ?</h2>
       <div class="card-grid">
@@ -327,18 +433,65 @@
     </div>
   </section>
 
+
+
   <footer>
     © 2025 Simplifier.agency. Tous droits réservés.
   </footer>
 
   <div style="position: sticky; bottom: 0; width: 100%; background: #f9fafb; padding: 1rem; text-align: center; border-top: 1px solid #e5e7eb; z-index: 1000; box-sizing: border-box;">
-    <a href="https://calendly.com/valentin-simplifier/30min" target="_blank" style="background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; border: none; font-size: 1rem;">Réserve ton appel</a>
+    <a href="https://calendly.com/valentin-simplifier/30min" target="_blank" style="background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; border: none; font-size: 1rem;">✓ Démarrer ta transformation</a>
   </div>
 
-  <!-- Script de vérification pour les icônes -->
+  <!-- Script pour le menu hamburger -->
   <script>
-    // Vérifier si Font Awesome est chargé correctement
     document.addEventListener('DOMContentLoaded', function() {
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const navMenu = document.getElementById('nav-menu');
+      const overlay = document.getElementById('overlay');
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      
+      // Fonction pour ouvrir/fermer le menu
+      function toggleMenu() {
+        navMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        
+        // Changer l'icône du bouton hamburger
+        const hamburgerIcon = hamburgerBtn.querySelector('i');
+        if (navMenu.classList.contains('active')) {
+          hamburgerIcon.classList.remove('fa-bars');
+          hamburgerIcon.classList.add('fa-times');
+        } else {
+          hamburgerIcon.classList.remove('fa-times');
+          hamburgerIcon.classList.add('fa-bars');
+        }
+      }
+      
+      // Event listeners
+      hamburgerBtn.addEventListener('click', toggleMenu);
+      overlay.addEventListener('click', toggleMenu);
+      
+      // Fermer le menu en cliquant sur un lien
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          toggleMenu();
+          
+          // Scroll doux vers la section
+          const targetId = this.getAttribute('href');
+          if (targetId !== '#') {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              setTimeout(() => {
+                window.scrollTo({
+                  top: targetElement.offsetTop - 60,
+                  behavior: 'smooth'
+                });
+              }, 300); // Petit délai pour laisser le menu se fermer
+            }
+          }
+        });
+      });
+      
       // Vérifier si les icônes sont visibles
       const icons = document.querySelectorAll('.card i');
       if (icons.length > 0) {
